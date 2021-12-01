@@ -14,6 +14,10 @@ public class SceneEditor : Editor {
         menu.AddItem(new GUIContent("Create/Img"), false, OnMenuClick, "img");
         menu.AddItem(new GUIContent("Create/Button"), false, OnMenuClick, "btn");
         menu.AddItem(new GUIContent("Create/Text"), false, OnMenuClick, "txt");
+        menu.AddItem(new GUIContent("Sibling/+1"), false, ChangeSibling, "Add");
+        menu.AddItem(new GUIContent("Sibling/-1"), false, ChangeSibling, "");
+        menu.AddItem(new GUIContent("Sibling/Last"), false, ChangeSibling, "Last");
+        menu.AddItem(new GUIContent("合并"), false, Merge);
         SceneView.duringSceneGui+=OnSceneGUI;
     }
 
@@ -38,12 +42,16 @@ public class SceneEditor : Editor {
         var patent = Selection.objects[0] as GameObject;
         switch (name) {
             case "img":
+
                 GameObject go = new GameObject("imgxx", typeof(Image));
                 go.layer=patent.layer;
                 go.transform.SetParent(patent.transform, false);
                 //go.transform.parent=patent.transform;
                 //go.transform.localPosition=Vector3.zero;
                 //go.transform.localScale=Vector3.one;
+                Undo.RegisterCreatedObjectUndo(go, "go");
+                Selection.activeObject=go;
+                
                 break;
 
         }
@@ -53,4 +61,43 @@ public class SceneEditor : Editor {
     private static void Create(string name) {
         GameObject gameObject = new GameObject(name);
     }
+
+    private static void Merge() {
+        if (Selection.objects.Length>0) {
+            var objs = Selection.objects;
+            var frist = objs[0] as GameObject;
+
+            Undo.IncrementCurrentGroup();
+
+            var parent = new GameObject("objs");
+            parent.transform.SetParent(frist.transform.parent);
+            parent.layer=frist.transform.parent.gameObject.layer;
+            parent.AddComponent<RectTransform>();
+            parent.transform.localPosition=Vector3.zero;
+            Undo.RegisterCreatedObjectUndo(parent, "Merge Go");
+            foreach (var item in objs) {
+                var go = item as GameObject;
+                Undo.SetTransformParent(go.transform, parent.transform, "Merge Trs");
+                //go.transform.SetParent(parent.transform);
+                //go.transform.SetSiblingIndex()
+
+            }
+
+        }
+
+    }
+
+    private static void ChangeSibling(object userData) {
+        string str = userData as string;
+        var go = Selection.objects[0] as GameObject;
+        var curIdx = go.transform.GetSiblingIndex();
+        if (str=="Add") {
+            go.transform.SetSiblingIndex(curIdx+1);
+        } else if (str=="Last") {
+            go.transform.SetAsLastSibling();
+        } else {
+            go.transform.SetSiblingIndex(curIdx-1);
+        }
+    }
+
 }
