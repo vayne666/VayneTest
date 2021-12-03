@@ -104,11 +104,11 @@ public class SceneEditor : Editor {
     private static void ResetPos() {
         var obj = Selection.objects[0] as GameObject;
         //Undo.RecordObject(obj.transform, "resetpos");
+
+        //Undo.IncrementCurrentGroup();   // 强制分组
+
         Undo.RegisterCompleteObjectUndo(obj.transform, "resetpos");
         obj.transform.localPosition=Vector3.zero;
-
-        Undo.IncrementCurrentGroup();   // 强制分组
-
         Undo.RegisterCompleteObjectUndo(obj, "reName");
         obj.name="new name";
     }
