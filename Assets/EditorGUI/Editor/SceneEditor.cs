@@ -30,10 +30,13 @@ public class SceneEditor : Editor {
         if (Event.current.type==EventType.MouseDown&&Event.current.button==1) {
             if (Selection.objects.Length<1) return;
             var obj = Selection.objects[0] as GameObject;
-            var ui = obj.GetComponent<UIBehaviour>();
-            if (ui!=null) {
-                menu.ShowAsContext();
+            if (obj!=null) {
+                var ui = obj.GetComponent<UIBehaviour>();
+                if (ui!=null) {
+                    menu.ShowAsContext();
+                }
             }
+
         }
     }
 

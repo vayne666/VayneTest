@@ -879,16 +879,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube
       objectReference: {fileID: 0}
-    - target: {fileID: 2645192569351915190, guid: 61fc003097d5dfd459ee52d62dd5bb69,
-        type: 3}
-      propertyPath: Progress
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2645192569351915190, guid: 61fc003097d5dfd459ee52d62dd5bb69,
-        type: 3}
-      propertyPath: str
-      value: 111333111
-      objectReference: {fileID: 0}
     - target: {fileID: 2645192569351915194, guid: 61fc003097d5dfd459ee52d62dd5bb69,
         type: 3}
       propertyPath: m_LocalPosition.x
