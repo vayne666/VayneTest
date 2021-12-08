@@ -30,19 +30,21 @@ SpriteAtlas:
       enableTightPacking: 1
     variantMultiplier: 1
     packables:
-    - {fileID: 2800000, guid: 1b44cf6cac9288d4c9c90fd602d137b4, type: 3}
-    - {fileID: 2800000, guid: ea4f3a12694dad44686fbd38c246fe35, type: 3}
-    - {fileID: 2800000, guid: 96ec2f0e9e09bc74f9e6e44a75b429d5, type: 3}
-    totalSpriteSurfaceArea: 19200
+    - {fileID: 102900000, guid: 2d505c2f2be83894aa2b3382a0c9c06c, type: 3}
+    totalSpriteSurfaceArea: 32000
     bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: ea4f3a12694dad44686fbd38c246fe35, type: 3}
+  - {fileID: 21300000, guid: 20bc55d2cbfd7eb4191ff48ee9243e52, type: 3}
+  - {fileID: 21300000, guid: 29ee8873e5aee59479d7a50d4fab0fc2, type: 3}
+  - {fileID: 21300000, guid: 9f018ae9686066044820fc7d2956c851, type: 3}
   - {fileID: 21300000, guid: 1b44cf6cac9288d4c9c90fd602d137b4, type: 3}
-  - {fileID: 21300000, guid: 96ec2f0e9e09bc74f9e6e44a75b429d5, type: 3}
   m_PackedSpriteNamesToIndex:
   - 301014
+  - 301002
+  - 301003
+  - 301001
   - 301013
-  - 301015
   m_Tag: Atlas2
   m_IsVariant: 0

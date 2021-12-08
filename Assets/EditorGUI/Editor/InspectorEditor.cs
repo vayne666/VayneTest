@@ -19,5 +19,8 @@ public class InspectorEditor : Editor {
         if (GUILayout.Button("Random progress")) {
             comp.Progress=Random.Range(0, 10);
         }
+        if (GUI.changed) {
+            EditorUtility.SetDirty(target);
+        }
     }
 }

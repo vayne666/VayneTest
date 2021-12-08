@@ -8,6 +8,8 @@ public class EditorGUITestComp : MonoBehaviour {
     [Range(0, 10)]
     public int Progress;
 
+    public string str;
+
     void Start() {
 
     }

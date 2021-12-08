@@ -27,6 +27,8 @@ public class AntiCheatToolkitTest : MonoBehaviour {
             num1++;
             text1.text=num1.ToString();
         });
+        UnityEditor.Sprites.Packer.RebuildAtlasCacheIfNeeded(UnityEditor.BuildTarget.Android);
+        UnityEditor.U2D.SpriteAtlasUtility.PackAllAtlases(UnityEditor.EditorUserBuildSettings.activeBuildTarget);
     }
 
     // Update is called once per frame
