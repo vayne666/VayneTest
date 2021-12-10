@@ -106,5 +106,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09058343ec5ba674289b10e07e3ec09a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Progress: 8
+  Progress: 6
   str: 111333111
