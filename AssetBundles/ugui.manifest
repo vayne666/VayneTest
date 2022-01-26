@@ -1,0 +1,20 @@
+ManifestFileVersion: 0
+CRC: 2583792594
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 9fd59f795f3e0b0437fedd10c1802b9d
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c4d5dee85f6c263eb0adbea350984ae1
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+- Class: 687078895
+  Script: {instanceID: 0}
+Assets:
+- Assets/UGUI/Atlas/Atlas1.spriteatlas
+Dependencies: []
