@@ -91,6 +91,9 @@ namespace CoffeeEditor.UIExtensions
             var image = target as AtlasImage;
             _preview.sprite = GetOriginalSprite(image.spriteAtlas, image.spriteName);
             _preview.color = image ? image.canvasRenderer.GetColor() : Color.white;
+            if (GUILayout.Button("win")) {
+                SelectSpriteWindow.Open(_spAtlas.objectReferenceValue as SpriteAtlas, null);
+            }
         }
 
         public override GUIContent GetPreviewTitle()
@@ -219,6 +222,7 @@ namespace CoffeeEditor.UIExtensions
                 SetAtlasLabelToSprites(atlas, false);
             }
         }
+
 
         private static string SetAtlasLabelToSprites(SpriteAtlas atlas, bool add)
         {
