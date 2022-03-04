@@ -6,11 +6,17 @@ using UnityEngine.UI;
 
 public class VImage : Image {
 
+    private bool isChanged;
     [SerializeField]
     private SpriteAtlas spriteAtlas;
+
     public SpriteAtlas SpriteAtlas {
         get { return spriteAtlas; }
-        set { spriteAtlas = value; }
+        set {
+            spriteAtlas = value;
+            isChanged = true;
+            SetAllDirty();
+        }
     }
 
     private string lastSpriteName;
@@ -20,21 +26,26 @@ public class VImage : Image {
         get { return spriteName; }
         set {
             spriteName = value;
+            if (value != spriteName) isChanged = true;
             SetAllDirty();
         }
     }
 
-    protected VImage()
-            : base() {
+    protected VImage() : base() {
     }
 
     public override void SetMaterialDirty() {
-        if (lastSpriteName != spriteName) {
-            lastSpriteName = spriteName;
+        if (lastSpriteName != spriteName) SetSprite();
+        base.SetMaterialDirty();
+    }
+
+    private void SetSprite() {
+        if (string.IsNullOrEmpty(spriteName)) {
+            sprite = null;
+        } else {
             sprite = spriteAtlas ? spriteAtlas.GetSprite(spriteName) : null;
         }
-
-        base.SetMaterialDirty();
+        lastSpriteName = spriteName;
     }
 
     protected override void OnPopulateMesh(VertexHelper toFill) {

@@ -12,12 +12,13 @@ public class SelectSpriteWindow : ScriptableWizard {
     static SpriteAtlas spriteAtlas;
     static Color selectColor = new Color(Color.green.r, Color.green.g, Color.green.b, 0.5f);
 
-    string selectSprite = string.Empty;
+    static string selectSprite = string.Empty;
 
     public static void Open(SpriteAtlas Atlas, Action<string> pickCallBack, string select = "") {
 
         onPick = pickCallBack;
         spriteAtlas = Atlas;
+        selectSprite = select;
         DisplayWizard<SelectSpriteWindow>("Select a Sprite");
     }
 
@@ -52,8 +53,8 @@ public class SelectSpriteWindow : ScriptableWizard {
                 rect.x = j * size + (j + 1) * padded;
                 rect.y = i * size + (i + 1) * padded + i * fontPadded;
                 if (GUI.Button(rect, tex)) {
-                    Debug.Log(sprite.name);
                     selectSprite = sprite.name;
+                    onPick.Invoke(selectSprite);
                 }
                 var fontRect = new Rect(rect.x, rect.y + rect.height, rect.width, 40f);
                 var style = selectSprite == sprite.name ? "MeTransitionSelectHead" : "ProgressBarBack";
@@ -68,7 +69,7 @@ public class SelectSpriteWindow : ScriptableWizard {
     private void OnDestroy() {
         onPick = null;
         spriteAtlas = null;
-        Debug.Log("des");
+        selectSprite = string.Empty;
     }
 
 

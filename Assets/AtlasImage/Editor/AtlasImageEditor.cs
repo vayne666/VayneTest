@@ -250,6 +250,7 @@ namespace CoffeeEditor.UIExtensions
                 .GetType("UnityEditor.U2D.SpriteAtlasUtility, UnityEditor")
                 .GetMethod("PackAtlases", BindingFlags.NonPublic | BindingFlags.Static)
                 .Invoke(null, new object[] {new[] {atlas}, EditorUserBuildSettings.activeBuildTarget});
+            
         }
 
         private static Sprite GetOriginalSprite(SpriteAtlas atlas, string name)
