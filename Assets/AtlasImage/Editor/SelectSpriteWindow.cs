@@ -10,8 +10,10 @@ public class SelectSpriteWindow : ScriptableWizard {
 
     static Action<string> onPick;
     static SpriteAtlas spriteAtlas;
-    static Color selectColor = new Color(Color.green.r, Color.green.g, Color.green.b, 0.5f);
 
+    float size = 80f;
+    float padded = 10f;
+    float fontPadded = 40;
     static string selectSprite = string.Empty;
 
     public static void Open(SpriteAtlas Atlas, Action<string> pickCallBack, string select = "") {
@@ -28,13 +30,8 @@ public class SelectSpriteWindow : ScriptableWizard {
         if (spriteAtlas == null) return;
         SerializedProperty spPackedSprites = new SerializedObject(spriteAtlas).FindProperty("m_PackedSprites");
         Sprite[] sprites = Enumerable.Range(0, spPackedSprites.arraySize)
-            .Select(index => spPackedSprites.GetArrayElementAtIndex(index).objectReferenceValue)
-            .OfType<Sprite>()
-            .ToArray();
-        float size = 80f;
-        //float padded = size + 10f;
-        float padded = 10f;
-        float fontPadded = 40;
+            .Select(index => spPackedSprites.GetArrayElementAtIndex(index).objectReferenceValue).OfType<Sprite>().ToArray();
+
         int screenWidth = (int)EditorGUIUtility.currentViewWidth;
         int columns = Mathf.FloorToInt(screenWidth / (size + padded));
         int row = Mathf.CeilToInt(sprites.Length / (float)columns);
