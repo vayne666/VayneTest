@@ -1,0 +1,38 @@
+Warning: The formatting in this file is subject to change.
+[LoadCachedData] 2316.80000000051us
+ 1 items
+ [GetCachedInfoFile] 85.1000000002387us
+ [Read and deserialize cache info] 1715.19999999873us
+  Time spent deserializing: 1ms
+  Cache hit count: 1
+ [Check for changed dependencies] 493.499999998676us
+[LoadCachedData] 2646.70000000115us
+ 2 items
+ [GetCachedInfoFile] 238.300000000891us
+ [Read and deserialize cache info] 2353.19999999774us
+  Time spent deserializing: 1ms
+  Cache hit count: 2
+ [Check for changed dependencies] 14.7999999971944us
+[LoadCachedData] 3547.90000000503us
+ 2 items
+ [GetCachedInfoFile] 179.49999999837us
+ [Read and deserialize cache info] 3083.89999999781us
+  Time spent deserializing: 2ms
+  Cache hit count: 2
+ [Check for changed dependencies] 254.300000000512us
+[CreateWorkItems] 31.3000000023749us
+[CalculateHashFileOffsets] 19.2999999853782us
+[Creating Cache Entries] 3022.49999999185us
+[Load Cached Data] 1354.30000000633us
+ [LoadCachedData] 1352.29999999865us
+  2 items
+  [GetCachedInfoFile] 127.399999997579us
+  [Read and deserialize cache info] 1200.40000000154us
+   Time spent deserializing: 0ms
+   Cache hit count: 2
+  [Check for changed dependencies] 4.00000001536682us
+[CopyingCachedFiles] 1566.99999998091us
+[ArchiveItems] 170.6000000122us
+ Archiving 0 Bundles
+[PostArchiveProcessing] 44.3999999843072us
+[Copying To Cache] 3.10000000172295us

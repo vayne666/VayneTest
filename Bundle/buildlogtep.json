@@ -1,0 +1,39 @@
+[
+{"name": "LoadCachedData", "ph": "X", "dur": 2316.80000000051, "tid": 1, "ts": 10525613, "pid": 1}
+,{"name": "1 items", "ph": "i", "tid": 1, "ts": 10525613, "pid": 1}
+,{"name": "GetCachedInfoFile", "ph": "X", "dur": 85.1000000002387, "tid": 1, "ts": 10525633, "pid": 1}
+,{"name": "Read and deserialize cache info", "ph": "X", "dur": 1715.19999999873, "tid": 1, "ts": 10525719, "pid": 1}
+,{"name": "Time spent deserializing: 1ms", "ph": "i", "tid": 1, "ts": 10525719, "pid": 1}
+,{"name": "Cache hit count: 1", "ph": "i", "tid": 1, "ts": 10525719, "pid": 1}
+,{"name": "Check for changed dependencies", "ph": "X", "dur": 493.499999998676, "tid": 1, "ts": 10527435, "pid": 1}
+,{"name": "LoadCachedData", "ph": "X", "dur": 2646.70000000115, "tid": 1, "ts": 17093477, "pid": 1}
+,{"name": "2 items", "ph": "i", "tid": 1, "ts": 17093477, "pid": 1}
+,{"name": "GetCachedInfoFile", "ph": "X", "dur": 238.300000000891, "tid": 1, "ts": 17093513, "pid": 1}
+,{"name": "Read and deserialize cache info", "ph": "X", "dur": 2353.19999999774, "tid": 1, "ts": 17093753, "pid": 1}
+,{"name": "Time spent deserializing: 1ms", "ph": "i", "tid": 1, "ts": 17093753, "pid": 1}
+,{"name": "Cache hit count: 2", "ph": "i", "tid": 1, "ts": 17093753, "pid": 1}
+,{"name": "Check for changed dependencies", "ph": "X", "dur": 14.7999999971944, "tid": 1, "ts": 17096108, "pid": 1}
+,{"name": "LoadCachedData", "ph": "X", "dur": 3547.90000000503, "tid": 1, "ts": 179856280, "pid": 1}
+,{"name": "2 items", "ph": "i", "tid": 1, "ts": 179856280, "pid": 1}
+,{"name": "GetCachedInfoFile", "ph": "X", "dur": 179.49999999837, "tid": 1, "ts": 179856306, "pid": 1}
+,{"name": "Read and deserialize cache info", "ph": "X", "dur": 3083.89999999781, "tid": 1, "ts": 179856488, "pid": 1}
+,{"name": "Time spent deserializing: 2ms", "ph": "i", "tid": 1, "ts": 179856488, "pid": 1}
+,{"name": "Cache hit count: 2", "ph": "i", "tid": 1, "ts": 179856488, "pid": 1}
+,{"name": "Check for changed dependencies", "ph": "X", "dur": 254.300000000512, "tid": 1, "ts": 179859573, "pid": 1}
+,{"name": "CreateWorkItems", "ph": "X", "dur": 31.3000000023749, "tid": 1, "ts": 179863217, "pid": 1}
+,{"name": "CalculateHashFileOffsets", "ph": "X", "dur": 19.2999999853782, "tid": 1, "ts": 179863250, "pid": 1}
+,{"name": "Creating Cache Entries", "ph": "X", "dur": 3022.49999999185, "tid": 1, "ts": 179863270, "pid": 1}
+,{"name": "Load Cached Data", "ph": "X", "dur": 1354.30000000633, "tid": 1, "ts": 179866294, "pid": 1}
+,{"name": "LoadCachedData", "ph": "X", "dur": 1352.29999999865, "tid": 1, "ts": 179866295, "pid": 1}
+,{"name": "2 items", "ph": "i", "tid": 1, "ts": 179866295, "pid": 1}
+,{"name": "GetCachedInfoFile", "ph": "X", "dur": 127.399999997579, "tid": 1, "ts": 179866313, "pid": 1}
+,{"name": "Read and deserialize cache info", "ph": "X", "dur": 1200.40000000154, "tid": 1, "ts": 179866442, "pid": 1}
+,{"name": "Time spent deserializing: 0ms", "ph": "i", "tid": 1, "ts": 179866442, "pid": 1}
+,{"name": "Cache hit count: 2", "ph": "i", "tid": 1, "ts": 179866442, "pid": 1}
+,{"name": "Check for changed dependencies", "ph": "X", "dur": 4.00000001536682, "tid": 1, "ts": 179867643, "pid": 1}
+,{"name": "CopyingCachedFiles", "ph": "X", "dur": 1566.99999998091, "tid": 1, "ts": 179867801, "pid": 1}
+,{"name": "ArchiveItems", "ph": "X", "dur": 170.6000000122, "tid": 1, "ts": 179869370, "pid": 1}
+,{"name": "Archiving 0 Bundles", "ph": "i", "tid": 1, "ts": 179869370, "pid": 1}
+,{"name": "PostArchiveProcessing", "ph": "X", "dur": 44.3999999843072, "tid": 1, "ts": 179869550, "pid": 1}
+,{"name": "Copying To Cache", "ph": "X", "dur": 3.10000000172295, "tid": 1, "ts": 179869595, "pid": 1}
+]

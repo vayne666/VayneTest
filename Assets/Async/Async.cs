@@ -226,3 +226,24 @@
 
 //    }
 //}
+
+public abstract class VTask {
+    public abstract CustomTask Task { get; }
+    public abstract void Update();
+}
+
+public class WebRequestTask : VTask {
+    private CustomTask task;
+    UnityEngine.Networking.UnityWebRequest unityWebRequest;
+    public override CustomTask Task => task;
+
+    public WebRequestTask(string url) {
+        task = new CustomTask();
+        unityWebRequest = UnityEngine.Networking.UnityWebRequest.Get(url);
+    }
+
+    public override void Update() {
+        if (!unityWebRequest.isDone) return;
+        task.SetResult();
+    }
+}
